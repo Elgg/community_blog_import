@@ -40,7 +40,13 @@ function get_owner_guid($username) {
 		'cash' => 'costelloc',
 		'juho' => 'juho.jaakkola',
 		'pawel' => 'srokap',
-		'steve' => 'steve_clay'
+		'steve' => 'steve_clay',
+		'dave' => 'davetosh',
+		'nologin' => 'bwerdmuller',
+		'nologin2' => 'marcus',
+		'nologin3' => 'pete',
+		'nick' => 'nickw',
+		'ravindra' => 'blacktooth'
 	);
 	
 	$user = false;
