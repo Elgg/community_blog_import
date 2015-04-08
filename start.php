@@ -103,6 +103,7 @@ function import_blogs($params) {
 	$blog->description = $params['data'][4] . $params['data'][5];
 	$blog->tags = string_to_tag_array($params['data'][7]);
 	$blog->__community_blog_import_guid = $params['data'][0]; // old guid
+	$blog->comments_on = 'On';
 
     $blog->save();
 	
