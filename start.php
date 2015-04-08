@@ -82,7 +82,7 @@ function import_blogs($params) {
 		'subtype' => 'blog',
 		'metadata_name_value_pairs' => array(
 			'name' => '__community_blog_import_guid',
-			'value' => $params['data'][0]
+			'value' => (int) $params['data'][0]
 		),
 		'count' => true
 	));
@@ -93,17 +93,18 @@ function import_blogs($params) {
 		return "Skipping previously imported blog";
 	}
 
-	$owner_guid = get_owner_guid($params['data'][1]);
+	$owner_guid = get_owner_guid($params['data'][1]);	
 
     $blog = new \ElggBlog();
 	$blog->owner_guid = $owner_guid;
 	$blog->container_guid = $owner_guid;
-	$blog->access_id = $params['data'][2];
+	$blog->access_id = (int) $params['data'][2];
 	$blog->title = $params['data'][3];
 	$blog->description = $params['data'][4] . $params['data'][5];
 	$blog->tags = string_to_tag_array($params['data'][7]);
-	$blog->__community_blog_import_guid = $params['data'][0]; // old guid
+	$blog->__community_blog_import_guid = (int) $params['data'][0]; // old guid
 	$blog->comments_on = 'On';
+	$blog->status = 'published';
 
     $blog->save();
 	
