@@ -7,6 +7,8 @@ const BLOG_GROUP = 559729;
 
 
 function importblogs() {
+	set_time_limit(0);
+	
 	// get our discussions
 	$options = array(
 		'type' => 'object',
