@@ -14,11 +14,10 @@ function importblogs() {
 		'type' => 'object',
 		'subtype' => 'groupforumtopic',
 		'container_guid' => BLOG_GROUP,
-		'limit' => 1
+		'limit' => false
 	);
 	// inc_offset = false because we're changing query results
-	//$discussions = new \ElggBatch('elgg_get_entities', $options, null, 25, false);
-	$discussions = elgg_get_entities($options);
+	$discussions = new \ElggBatch('elgg_get_entities', $options, null, 25, false);
 	
 	$dbprefix = elgg_get_config('dbprefix');
 	$blog_id = get_subtype_id('object', 'blog');
