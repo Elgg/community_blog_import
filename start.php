@@ -23,7 +23,9 @@ function importblogs() {
 		'marcus',
 		'pete',
 		'nickw',
-		'blacktooth'
+		'blacktooth',
+		'tachyon',
+		'paco'
 	);
 	
 	
