@@ -1,2 +1,2 @@
 # community_blog_import
-CSV Processor for consolidating elgg blog into the community site
+Migrates the community blog discussions to real blog entities and discussion replies to comments

@@ -4,16 +4,12 @@
 	<id>community_blog_import</id>
 	<author>Matt Beckett (matt@mattbeckett.me)</author>
 	<version>1.0</version>
-	<description>CSV Processor for consolidating elgg blog into the community site</description>
+	<description>Single-run script for migrating the blog to the community proper</description>
 	<website>http://elgg.org/</website>
 	<copyright>See COPYRIGHT.txt</copyright>
 	<license>GNU General Public License version 2</license>
 	<requires>
 		<type>elgg_release</type>
 		<version>1.9</version>
-	</requires>
-	<requires>
-		<type>plugin</type>
-		<name>csv_process</name>
 	</requires>
 </plugin_manifest>
